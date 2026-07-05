@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "manutrace"
+version = "0.1.0a1"
+description = "Traceable Chinese journal manuscript writing and submission build toolkit"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "ManuTrace contributors" }]
+license = { text = "MIT" }
+keywords = ["manuscript", "citation", "provenance", "docx", "academic-writing"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Science/Research",
+  "Natural Language :: Chinese (Simplified)",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Text Processing :: Markup",
+]
+
+[project.scripts]
+manutrace = "manutrace_cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "tools/pwt" }
+py-modules = [
+  "manutrace_cli",
+  "build_manuscript",
+  "migrate_manuscript",
+  "pipeline",
+  "pwt_init",
+  "extract_journal_rules",
+  "parse_references",
+  "render_reference_preview",
+  "rename_ref_keys",
+  "reference_summaries",
+  "build_evidence_map",
+  "reference_candidate",
+  "outline_gate",
+  "coverage_report",
+]

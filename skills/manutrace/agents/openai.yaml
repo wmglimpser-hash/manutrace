@@ -1,0 +1,4 @@
+interface:
+  display_name: "稿迹 ManuTrace"
+  short_description: "可追溯中文论文写作、证据审查、引用数字与投稿构建全流程"
+  default_prompt: "Use $manutrace to create a traceable Chinese journal manuscript delivery package."
